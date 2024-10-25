@@ -1,0 +1,11 @@
+Garcia,Juan 25 3
+Martinez,Maria 32 4
+Lopez,Carlos 22 1
+Rodriguez,Ana 28 5
+Gomez,Pedro 30 5
+Fernandez,Laura 24 1
+Diaz,Jose 29 3
+Perez,Marta 27 4
+Sanchez,David 26 2
+Torres,Sofia 31 5
+Ramirez,Luis 23 2
