@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+struct pago{
+    char sucursal[3];
+    char seccion[4];
+    char empleado[21];
+    float sueldo;
+} ;
+
+void cargarPagos();
+void listarPagos();
+
+int main(){
+   cargarPagos();
+   listarPagos();
+   return 0;
+}
+
+void cargarPagos() {
+    struct pago p;
+    FILE *archPagos, *lote;
+
+    archPagos = fopen("archPagos.dat","wb");
+    lote = fopen("lote.txt","rt");
+    if(lote != NULL) {
+	    while(fscanf(lote, "%s %s %s %f", p.sucursal, p.seccion, p.empleado, &p.sueldo) == 4){
+	       fwrite(&p, sizeof(struct pago), 1, archPagos);
+	    }
+		fclose(lote);
+		fclose(archPagos);
+    } else
+        printf("archivo lote.txt no existe!");
+}
+
+void listarPagos() {
+   struct pago p;
+   FILE *archPagos;
+
+   archPagos = fopen("archPagos.dat","rb");
+   if(archPagos != NULL) {
+      fread(&p,sizeof(struct pago), 1,archPagos);
+      while(!feof(archPagos)) {
+         printf("\n%s %s %s %.2f", p.sucursal, p.seccion, p.empleado, p.sueldo);
+         fread(&p,sizeof(struct pago), 1,archPagos);
+      }
+      fclose(archPagos);
+    } else
+        printf("archivo archPagos.dat no existe!");
+}

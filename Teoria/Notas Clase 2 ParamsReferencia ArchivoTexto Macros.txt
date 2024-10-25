@@ -1,0 +1,75 @@
+En Pascal
+---------
+procedure calcula(x, w: real; var suma, prod: real);
+...
+
+invocación: 
+var
+  a,b,suma, producto: real;
+begin
+  calcula(a,b, suma, producto); // no se distingue si son de E o S
+  writeln ...
+end.
+
+En C
+-----
+calcula(... float* dsum...) // dsum es tipo PUNTERO A FLOAT. PUNTERO= ALMACENA DIR MEMORIA.
+
+invocación: 
+calcula(x,y, &sum, &prod) // &sum = "la dirección de la var sum" // se distingue si es de E o S
+
+param x referencia: invocar con direccion de variable y recibir con un puntero.
+uso param x ref; *dsum ("adonde apunta dsum") INDIRECCION
+
+IMPORTANTE: CORRESPONDENCIA TIPOS ENTRE PARAMS ACTUALES Y FORMALES. Y EN LAS ASIGNACIONES
+
+float a=4.5 ,b=7.8; // a en A30, b en A60
+intercambia(&a, &b);
+
+FORMATO PTRS: %p
+
+codigo equivale a &codigo[0];
+
+// archivo txt en subcarpeta
+fopen("ayed1/datos.txt") 
+// programa en subcarpeta
+fopen("../datos.txt");
+// programa en diferentes carpetas
+fopen("../prue/datos.txt");
+
+fopen("C:/ProyectosC/prue"); // evitar rutas absolutas; usar relativas.
+
+
+# directivas precompilador
+
+# define IVA 21 // constante! // buscar y reemplazar
+...
+
+preciotot = precio + precio * IVA / 100;
+
+... sum(z,w) -> x+y -> z + w
+
+
+
+
+# define mmax(a, b) (a > b)? a : b
+int x = 6, y = 2;
+...
+printf("....", mmax(x++, y++);
+
+mmax(x++, y++) -> (a > b)? a : b -> (x++ > y++)? x++ : y++;
+
+6 > 2 ?
+x ->7 y -> 3
+x -> 8
+
+expresion ? verd : falso -> equivale a un if (compacta)
+
+if (a > b) 
+  return a;
+else
+  return b; 
+
+El maximo es: 6 
+
+

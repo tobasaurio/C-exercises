@@ -1,0 +1,25 @@
+#include <stdio.h>
+struct stock  {
+	   char depos[7];
+	   char art[4];
+	   int cant;} ;
+void main(){
+struct stock r;
+int n;
+FILE *archstock;
+/*
+archstock= fopen("archstock","wb");
+scanf("%d",&n);
+while(n--) {
+	fflush(stdin);
+	scanf("%s %s %d",r.depos, r.art, &r.cant);
+	fwrite(&r, sizeof(struct stock), 1,archstock);
+	  }
+fclose(archstock);*/
+archstock= fopen("archstock","rb");
+fread(&r,sizeof(struct stock), 1,archstock);
+while(!feof(archstock)) {
+	printf("%s %s  %d\n",r.depos, r.art, r.cant);
+	fread(&r,sizeof(struct stock), 1,archstock);
+      }
+fclose(archstock);}
