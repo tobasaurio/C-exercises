@@ -1,0 +1,5 @@
+Balcarce 70 50
+Mardel 80 240
+Carilo 10 10
+Tandil 120 140
+Miramar 30 25
