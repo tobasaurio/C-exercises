@@ -1,0 +1,7 @@
+100MTR 12.5 3
+juan 12.5
+pepe 12
+luis 13
+400VAL 0 0
+800LLA 95 1
+jorge 95
